@@ -1,8 +1,9 @@
 const express = require("express");
 const mongoose = require("mongoose");
 
-const app = express();
+const path = require("path");
 
+const app = express();
 app.set("view engine", "ejs");
 
 // ----- DB connection ----- //
@@ -16,3 +17,19 @@ async function main() {
 main().catch((err) => console.log(err));
 
 // ----- Middleware ----- //
+
+app.use(express.static(path.join(__dirname, "public")));
+
+// ----- Routes ----- //
+
+app.get("/", (req, res) => {
+  res.render("index", { title: "Home" });
+});
+
+// ----- Error Handling ----- //
+
+app.use((req, res) => {
+  res.statusCode(404).render("404", { title: "404" });
+});
+
+app.listen(3000);
