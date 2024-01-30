@@ -16,7 +16,7 @@ function messages_index(req, res) {
   res.render(path.join("messages", "index"), { title: "Messages", messages });
 }
 
-function message_details(req, res) {
+function message_details_get(req, res) {
   const { id } = req.params;
 
   Message.findById(id)
@@ -29,7 +29,7 @@ function message_details(req, res) {
     });
 }
 
-function message_get(req, res) {
+function message_new_get(req, res) {
   res.render(path.join("messages", "new"), { title: "New Message" });
 }
 
@@ -38,13 +38,19 @@ function message_post(req, res) {
 }
 
 function message_delete(req, res) {
-  res.send(`Delete: ${req.params.id}`);
+  const { id } = req.params;
+  Message.deleteById(id).then(
+    res.redirect("/").catch((err) => {
+      console.log(err);
+      res.redirect(`/messages/${id}`);
+    }),
+  );
 }
 
 module.exports = {
   messages_index,
-  message_details,
-  message_get,
+  message_details_get,
+  message_new_get,
   message_post,
   message_delete,
 };
