@@ -4,8 +4,8 @@
   "description": "A mini message board using express and mongoDB",
   "main": "index.js",
   "scripts": {
-    "startDev": "npx kill-port 3000 && nodemon --env-file=.env server.js",
-    "scss": "sass --watch public/style/src/style.scss"
+    "startDev": "npx kill-port 3000 && nodemon --env-file=.env server.js & npm run scss",
+    "scss": "node-sass --watch styles -o public/styles"
   },
   "repository": {
     "type": "git",
@@ -30,7 +30,6 @@
   "dependencies": {
     "ejs": "^3.1.9",
     "express": "^4.18.2",
-    "express-compile-sass": "^4.0.0",
     "mongoose": "^8.1.1",
     "node": "^21.6.1",
     "node-sass": "^9.0.0",
