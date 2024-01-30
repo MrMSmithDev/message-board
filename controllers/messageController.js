@@ -12,6 +12,7 @@ function messages_index(req, res) {
     })
     .catch((err) => {
       console.log(err);
+      res.status(500).render("404", { title: "Could not retrieve messages" });
     });
   res.render(path.join("messages", "index"), { title: "Messages", messages });
 }
@@ -25,7 +26,7 @@ function message_details_get(req, res) {
     })
     .catch((err) => {
       console.log(err);
-      res.statusCode(404).render("404", { title: "Message Not Found" });
+      res.status(404).render("404", { title: "Message Not Found" });
     });
 }
 
