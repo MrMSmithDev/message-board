@@ -1,8 +1,5 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const path = require("path");
-
-const compileSass = require("express-compile-sass");
 
 const messagesRouter = require("./routes/messageRoutes");
 
@@ -22,16 +19,6 @@ async function main() {
 main().catch((err) => console.log(err));
 
 // ----- Middleware ----- //
-
-app.use(
-  compileSass({
-    root: path.join(__dirname, "public"),
-    sourceMap: true,
-    sourceComments: true,
-    watchFiles: true,
-    logToConsole: false,
-  }),
-);
 app.use(express.static("public"));
 
 // ----- Routes ----- //
