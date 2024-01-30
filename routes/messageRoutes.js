@@ -2,6 +2,7 @@ const express = require("express");
 const controller = require("../controllers/messageController");
 
 const router = express.Router();
+router.use(express.static("public"));
 
 router.get("/", controller.messages_index);
 
