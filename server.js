@@ -27,6 +27,10 @@ app.get("/", (req, res) => {
   res.render("index", { title: "Home" });
 });
 
+app.get("/about", (req, res) => {
+  res.render("about", { title: "About Us" });
+});
+
 app.use("/messages", messagesRouter);
 
 // ----- Error Handling ----- //
