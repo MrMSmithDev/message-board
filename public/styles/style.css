@@ -63,6 +63,9 @@ nav {
         border-bottom: 3px solid #fff;
         transform: scale(1.1); }
 
+.new-message-a {
+  position: absolute; }
+
 footer {
   color: #3a3a3a;
   display: grid;
@@ -80,7 +83,29 @@ footer {
       transform: scale(1.1); }
 
 main {
-  padding: 20px; }
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  position: relative; }
+
+.home-main {
+  align-items: center;
+  gap: 50px;
+  margin: auto 0; }
+
+.home-title {
+  font-family: "poor-story", sans-serif; }
+  .home-title p {
+    font-size: 64px; }
+  .home-title h1 {
+    font-size: 128px; }
+
+.home-p {
+  font-size: 18px;
+  width: calc(min(80%, 850px)); }
+  .home-p span {
+    font-family: "poor-story", sans-serif;
+    font-weight: bold; }
 
 .page-404 {
   padding: 50px 0;
