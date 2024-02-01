@@ -1,8 +1,18 @@
 <%- include("./partials/head"); %>
 <%- include("./partials/nav"); %>
 
-<main class="content">
-    <h1>Home</h1>
+<main class="home-main">
+    <%- include("./partials/newMessage") %>
+    <div class="home-title">
+        <p>The</p>
+        <h1>BOARD</h1>
+    </div>
+    <p class="home-p">
+        Welcome to <span>The Board</span>, a place where you can get down and share all 
+        your thoughts and feelings and put them out in to the world with a level of anonymity 
+        that you choose. You can share your own thoughts, or comment on others. All we ask is 
+        that you keep your thoughts polite and are mindful of others feelings.
+    </p>
 </main>
 
 <%- include("./partials/footer"); %>
