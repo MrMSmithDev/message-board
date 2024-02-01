@@ -85,6 +85,10 @@ nav {
     }
 }
 
+.new-message-a {
+    position: absolute;
+}
+
 footer {
     color: #3a3a3a;
     display: grid;
@@ -109,7 +113,39 @@ footer {
 // --------------------- main --------------------- //
 
 main {
+    display: flex;
+    flex-direction: column;
     padding: 20px;
+    position: relative;
+}
+
+// --------------------- home --------------------- //
+
+.home-main {
+    align-items: center;
+    gap: 50px;
+    margin: auto 0;
+}
+
+.home-title {
+    font-family: "poor-story", sans-serif;
+    p {
+        font-size: 64px;
+    }
+
+    h1 {
+        font-size: 128px;
+    }
+}
+
+.home-p {
+    font-size: 18px;
+    width:  calc(min(80%, 850px));
+
+    span {
+        font-family: "poor-story", sans-serif;
+        font-weight: bold;
+    }
 }
 
 // --------------------- 404 --------------------- //
