@@ -44,9 +44,11 @@ function message_post(req, res) {
   // const avatar = createAvatar(avatarCollection, { seed: req.author });
   // const avatarSvg = avatar.toString();
 
-  // console.log(avatarSvg);
+  const { author, message } = req.body;
 
-  res.send("Post new message");
+  console.log(author, message);
+
+  res.send("posted");
 }
 
 function message_delete(req, res) {
