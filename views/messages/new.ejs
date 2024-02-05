@@ -1,16 +1,19 @@
 <%- include("../partials/head") %>
 <%- include("../partials/nav") %>
 
-<main>
+<main class="new-message-page">
+    <h1>New Message</h1>
     <form action="/messages" method="POST">
         <div class="form-input">
             <label for="author">Author</label>
-            <input type="text" name="author" id="author" required/>
+            <input type="text" name="author" id="author" maxlength="50" required/>
+            <button class="info-button">?</button>
         </div>
 
         <div class="form-input">
             <label for="message">Message</label>
-            <textarea name="message" id="message" cols="30" rows="10" required></textarea>
+            <textarea name="message" id="message" cols="30" rows="10"  maxlength="250" required></textarea>
+            <button class="info-button">?</button>
         </div>
 
         <button type="submit">POST</button>
