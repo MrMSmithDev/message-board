@@ -1,8 +1,14 @@
 /* eslint-disable camelcase */
 const path = require("path");
+// const diceBear = require("@dicebear/core").default;
+// const avatarCollection = require("@dicebear/thumbs").default;
 const Message = require("../models/message");
 
+// const { createAvatar } = diceBear;
+
 function messages_index(req, res) {
+  console.log(req);
+
   let messages = [];
   Message.find()
     .sort({ date_posted: -1 })
@@ -35,6 +41,11 @@ function message_new_get(req, res) {
 }
 
 function message_post(req, res) {
+  // const avatar = createAvatar(avatarCollection, { seed: req.author });
+  // const avatarSvg = avatar.toString();
+
+  // console.log(avatarSvg);
+
   res.send("Post new message");
 }
 
