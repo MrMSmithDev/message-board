@@ -97,9 +97,10 @@ footer {
 main {
   display: flex;
   flex-direction: column;
+  margin: 0 5vw;
   padding: 20px;
   position: relative;
-  pointer-events: none; }
+  width: 90vw; }
 
 .home-main {
   align-items: center;
@@ -148,7 +149,7 @@ main {
     margin-bottom: 8px; }
   .form-input input, .form-input textarea {
     letter-spacing: 1.3px;
-    padding: 3px 5px;
+    padding: 5px 8px;
     resize: none; }
   .form-input .info-button {
     display: grid;
