@@ -4,11 +4,11 @@ const controller = require("../controllers/messageController");
 const router = express.Router();
 router.use(express.static("public"));
 
-router.get("/", controller.messages_index);
+router.get("/", controller.message_index);
 
 router.post("/", controller.message_post);
 
-router.get("/load_samples", controller.message_load_samples);
+// router.get("/load_samples", controller.message_load_samples);
 
 router.get("/new", controller.message_new_get);
 
