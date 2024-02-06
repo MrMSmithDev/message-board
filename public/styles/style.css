@@ -74,8 +74,8 @@ nav {
   height: 30px;
   justify-content: center;
   position: absolute;
-  right: 20px;
-  top: 108px;
+  right: 15px;
+  top: 103px;
   width: 30px; }
 
 footer {
@@ -98,9 +98,8 @@ main {
   display: flex;
   flex-direction: column;
   margin: 0 5vw;
-  padding: 20px;
-  position: relative;
-  width: 90vw; }
+  padding: 20px 5vw;
+  position: relative; }
 
 .home-main {
   align-items: center;
@@ -121,6 +120,35 @@ main {
   .home-p span {
     font-family: "poor-story", sans-serif;
     font-weight: bold; }
+
+.message-main h1 {
+  font-family: "poor-story", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center; }
+
+.message-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; }
+
+.message-single {
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);
+  padding: 10px; }
+  .message-single div {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 5px; }
+  .message-single .message-avatar {
+    background-color: yellow;
+    height: 30px;
+    width: 30px; }
+  .message-single .message-author {
+    font-weight: bold; }
+  .message-single .message-content {
+    line-height: 1.5;
+    text-indent: 5px; }
 
 .new-message-page {
   align-items: center;
