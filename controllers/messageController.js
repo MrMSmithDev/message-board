@@ -1,11 +1,8 @@
 /* eslint-disable camelcase */
 const path = require("path");
-// const diceBear = require("@dicebear/core").default;
-// const avatarCollection = require("@dicebear/thumbs").default;
+const generateAvatar = require("generate-avatar");
 const Message = require("../models/message");
 const sampleMessages = require("../samples/messageSamples");
-
-// const { createAvatar } = diceBear;
 
 function message_index(req, res) {
   Message.find()
@@ -45,14 +42,25 @@ function message_new_get(req, res) {
 }
 
 function message_post(req, res) {
-  // const avatar = createAvatar(avatarCollection, { seed: req.author });
-  // const avatarSvg = avatar.toString();
-
   const { author, message } = req.body;
+
+  const avatarSvg = generateAvatar.generateFromString(author);
+
+  const newMessage = new Message({
+    author,
+    message,
+    avatar_svg: avatarSvg,
+  });
 
   console.log(author, message);
 
-  res.send("posted");
+  newMessage
+    .save()
+    .then((result) => res.redirect(`/messages/${result._id}`))
+    .catch((err) => {
+      console.log(err);
+      res.render("/messages/new", { title: "New Message", author, message });
+    });
 }
 
 function message_load_samples(req, res) {
