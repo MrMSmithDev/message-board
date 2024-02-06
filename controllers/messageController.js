@@ -3,10 +3,11 @@ const path = require("path");
 // const diceBear = require("@dicebear/core").default;
 // const avatarCollection = require("@dicebear/thumbs").default;
 const Message = require("../models/message");
+const sampleMessages = require("../samples/messageSamples");
 
 // const { createAvatar } = diceBear;
 
-function messages_index(req, res) {
+function message_index(req, res) {
   console.log(req);
 
   let messages = [];
@@ -51,6 +52,11 @@ function message_post(req, res) {
   res.send("posted");
 }
 
+function message_load_samples(req, res) {
+  Message.insertMany(sampleMessages).catch((err) => console.log(err));
+  res.redirect("/");
+}
+
 function message_delete(req, res) {
   const { id } = req.params;
   Message.deleteById(id).then(
@@ -62,9 +68,10 @@ function message_delete(req, res) {
 }
 
 module.exports = {
-  messages_index,
+  message_index,
   message_details_get,
   message_new_get,
   message_post,
   message_delete,
+  message_load_samples,
 };
