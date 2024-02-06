@@ -6,4 +6,11 @@ const MessageSchema = new mongoose.Schema({
   date_posted: { type: Date, required: true },
 });
 
+MessageSchema.pre("save", (next) => {
+  if (!this.date_posted) {
+    this.date_posted = new Date();
+  }
+  next();
+});
+
 module.exports = mongoose.model("Message", MessageSchema);
