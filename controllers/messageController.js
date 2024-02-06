@@ -8,20 +8,20 @@ const sampleMessages = require("../samples/messageSamples");
 // const { createAvatar } = diceBear;
 
 function message_index(req, res) {
-  console.log(req);
-
-  let messages = [];
   Message.find()
     .sort({ date_posted: -1 })
     .limit(10)
     .then((result) => {
-      messages = result;
+      const messages = [...result];
+      res.render(path.join("messages", "index"), {
+        title: "Messages",
+        messages,
+      });
     })
     .catch((err) => {
       console.log(err);
       res.status(500).render("404", { title: "Could not retrieve messages" });
     });
-  res.render(path.join("messages", "index"), { title: "Messages", messages });
 }
 
 function message_details_get(req, res) {
@@ -29,7 +29,10 @@ function message_details_get(req, res) {
 
   Message.findById(id)
     .then((result) => {
-      res.send(result);
+      res.render(path.join("messages", "details"), {
+        title: `Message ${id}`,
+        message: result,
+      });
     })
     .catch((err) => {
       console.log(err);
