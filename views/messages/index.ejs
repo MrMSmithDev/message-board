@@ -2,7 +2,31 @@
 <%- include("../partials/nav") %>
 <%- include("../partials/newMessage"); %>
 
-<main>
+<main class="message-main">
+    <h1>Messages</h1>
+
+    <div class="message-feed">
+
+        <% if (messages.length > 0) { %>
+            <% messages.forEach(message => { %>
+
+                <a class="message-single" href="/messages/<%= message._id %>">
+                    <div>
+                        <div class="message-avatar"></div><!-- svg -->
+                        <h3 class="message-author"><%= message.author %></h3>
+                    </div>
+                    <p class="message-content"><%= message.message %></p>
+                </a>
+
+            <% }) %>
+        <% } else { %>
+
+            <p>No Messages retrieved</p>
+
+        <% } %>
+
+    </div>
+
     
 </main>
 
