@@ -12,7 +12,8 @@
 
                 <a class="message-single" href="/messages/<%= message._id %>">
                     <div>
-                        <div class="message-avatar"></div><!-- svg -->
+                        <div class="avatar"><%- message.avatar_svg %></div>
+
                         <h3 class="message-author"><%= message.author %></h3>
                     </div>
                     <p class="message-content"><%= message.message %></p>
