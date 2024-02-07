@@ -140,8 +140,7 @@ main {
     display: flex;
     gap: 10px;
     margin-bottom: 5px; }
-  .message-single .message-avatar {
-    background-color: yellow;
+  .message-single .avatar > svg {
     height: 30px;
     width: 30px; }
   .message-single .message-author {
