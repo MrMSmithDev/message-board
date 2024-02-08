@@ -38,7 +38,11 @@ function message_details_get(req, res) {
 }
 
 function message_new_get(req, res) {
-  res.render(path.join("messages", "new"), { title: "New Message" });
+  res.render(path.join("messages", "new"), {
+    title: "New Message",
+    author: "",
+    message: "",
+  });
 }
 
 function message_post(req, res) {
