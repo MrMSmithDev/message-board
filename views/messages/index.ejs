@@ -10,14 +10,7 @@
         <% if (messages.length > 0) { %>
             <% messages.forEach(message => { %>
 
-                <a class="message-single" href="/messages/<%= message._id %>">
-                    <div>
-                        <div class="avatar"><%- message.avatar_svg %></div>
-
-                        <h3 class="message-author"><%= message.author %></h3>
-                    </div>
-                    <p class="message-content"><%= message.message %></p>
-                </a>
+                <%- include('./partials/messageLink', { message: message }) %>
 
             <% }) %>
         <% } else { %>

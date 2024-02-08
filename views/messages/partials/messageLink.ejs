@@ -1,0 +1,11 @@
+<a class="message-single" href="/messages/<%= message._id %>">
+    <div>
+        <div class="avatar"><%- message.avatar_svg %></div>
+
+        <h3 class="message-author"><%= message.author %></h3>
+    </div>
+    <p class="message-content"><%= message.message %></p>
+    <div class="message-info">
+        <p><%= `${message.date_posted.getDate()}.${message.date_posted.getMonth()}.${message.date_posted.getFullYear()}` %></p>
+    </div>
+</a>
