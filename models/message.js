@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const MessageSchema = new mongoose.Schema({
-  message: { type: String, require: true, maxLength: 250 },
+  message: { type: String, require: true, maxLength: 500 },
   author: { type: String, required: true, maxLength: 50 },
   avatar_svg: { type: String, required: true },
   date_posted: { type: Date, default: new Date() },
