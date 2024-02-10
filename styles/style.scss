@@ -27,7 +27,7 @@
 }
 
 body {
-    background-color: #ceecf5;
+    background-color: #ddeff5;
     display: flex;
     flex-direction: column;
     font-family: "quicksand", sans-serif;
@@ -95,7 +95,7 @@ nav {
     font-weight: bold;
     height: 30px;
     justify-content: center;
-    position: absolute; // try sticky out
+    position: absolute;
     right: 15px;
     top: 103px;
     width: 30px;
@@ -138,6 +138,23 @@ main {
     align-items: center;
     gap: 50px;
     margin: auto 0;
+
+    .home-messages-link {
+        border: 2px solid #3a3a3a;
+        display: inline-block;
+        font-family: "poor-story", sans-serif;
+        padding: 8px 12px;
+
+        transition: ease-in .2s;
+        -webkit-transition: ease-in .2s;
+        -o-transition: ease-in .2s;
+        -moz-transition: ease-in .2s;
+
+        &:hover {
+            box-shadow: 2px 2px 2px #3a3a3a;
+            transform: translate(-2px, -2px);
+        }
+    }
 }
 
 .home-title {
