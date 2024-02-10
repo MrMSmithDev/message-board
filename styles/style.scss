@@ -86,19 +86,22 @@ nav {
 }
 
 .new-message-a {
-    align-items: center;
     border: 2px solid #3a3a3a;
     border-radius: 5px;
     color: #3a3a3a;
-    display: flex;
+    display: grid;
     font-size: 24px;
     font-weight: bold;
     height: 30px;
-    justify-content: center;
+    place-content: center;
     position: absolute;
     right: 15px;
     top: 103px;
     width: 30px;
+
+    p {
+        margin-left: 2px;
+    }
 }
 
 footer {
@@ -241,8 +244,7 @@ main {
     gap: 20px;
 
     h1 {
-        font-family: "poor-story", sans-serif;
-        font-size: 32px;
+        font-size: 24px;
         font-weight: bold;
     }
 
@@ -286,6 +288,18 @@ main {
         top: 0;
     }
 
+}
+
+// -------------------- about -------------------- //
+
+.about-page {
+    gap: 20px;
+    text-align: center;
+
+    h1 {
+        font-size: 24px;
+        font-weight: bold;
+    }
 }
 
 // --------------------- 404 --------------------- //

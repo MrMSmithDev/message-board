@@ -64,19 +64,20 @@ nav {
         transform: scale(1.1); }
 
 .new-message-a {
-  align-items: center;
   border: 2px solid #3a3a3a;
   border-radius: 5px;
   color: #3a3a3a;
-  display: flex;
+  display: grid;
   font-size: 24px;
   font-weight: bold;
   height: 30px;
-  justify-content: center;
+  place-content: center;
   position: absolute;
   right: 15px;
   top: 103px;
   width: 30px; }
+  .new-message-a p {
+    margin-left: 2px; }
 
 footer {
   color: #3a3a3a;
@@ -172,8 +173,7 @@ main {
   color: #3a3a3a;
   gap: 20px; }
   .new-message-page h1 {
-    font-family: "poor-story", sans-serif;
-    font-size: 32px;
+    font-size: 24px;
     font-weight: bold; }
   .new-message-page form {
     display: flex;
@@ -206,6 +206,13 @@ main {
     position: absolute;
     right: 0;
     top: 0; }
+
+.about-page {
+  gap: 20px;
+  text-align: center; }
+  .about-page h1 {
+    font-size: 24px;
+    font-weight: bold; }
 
 .page-404 {
   padding: 50px 0;
