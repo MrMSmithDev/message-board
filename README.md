@@ -1,2 +1,2 @@
 # message-board
-A mini messageboard using express and mongoDB
+A mini message board using express and mongoDB
