@@ -118,6 +118,13 @@ main {
     .home-main .home-messages-link:hover {
       box-shadow: 2px 2px 2px #3a3a3a;
       transform: translate(-2px, -2px); }
+    .home-main .home-messages-link:active {
+      box-shadow: none;
+      transform: translate(0, 0);
+      transition: ease-in 0s;
+      -webkit-transition: ease-in 0s;
+      -o-transition: ease-in 0s;
+      -moz-transition: ease-in 0s; }
 
 .home-title {
   font-family: "poor-story", sans-serif; }
