@@ -2,8 +2,17 @@
 <%- include("../partials/nav") %>
 <%- include("../partials/newMessage"); %>
 
-<main>
-    
+<main class="content message-details">
+
+    <h3 class="message-detail-author">Shared By: <span><%= message.author %></span></h3>
+
+    <p class="message-detail-content"><%= message.message %></p>
+
+    <p class="message-detail-date">
+        <%= `${message.date_posted.getDate()}.${message.date_posted.getMonth()}.${message.date_posted.getFullYear()}` %>
+    </p>
+
+
 </main>
 
 <%- include("../partials/footer") %>
