@@ -215,17 +215,13 @@ main {
     right: 0;
     top: 0; }
 
-message
 .message-details .message-detail-author > span,
-message
 .message-details .message-detail-date {
   font-weight: bold; }
 
-message
 .message-details .message-detail-content {
   text-indent: 5px; }
 
-message
 .message-details p {
   margin-top: 20px; }
 
