@@ -152,11 +152,12 @@ main {
   gap: 20px; }
 
 .message-single {
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);
   display: flex;
   flex-direction: column;
   gap: 5px;
   padding: 10px; }
+  .message-single:not(:last-of-type) {
+    border-bottom: 2px solid #3a3a3a; }
   .message-single div {
     align-items: center;
     display: flex;
@@ -213,6 +214,20 @@ main {
     position: absolute;
     right: 0;
     top: 0; }
+
+message
+.message-details .message-detail-author > span,
+message
+.message-details .message-detail-date {
+  font-weight: bold; }
+
+message
+.message-details .message-detail-content {
+  text-indent: 5px; }
+
+message
+.message-details p {
+  margin-top: 20px; }
 
 .about-page {
   gap: 20px;

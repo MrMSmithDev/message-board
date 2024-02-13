@@ -210,11 +210,14 @@ main {
 }
 
 .message-single {
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);
     display: flex;
     flex-direction: column;
     gap: 5px;
     padding: 10px;
+
+    &:not(:last-of-type) {
+        border-bottom: 2px solid #3a3a3a;
+    }
 
     div {
         align-items: center;
@@ -298,6 +301,24 @@ main {
         top: 0;
     }
 
+}
+message
+// -------------- message details ---------------- //
+
+.message-details {
+
+    .message-detail-author > span,
+    .message-detail-date {
+        font-weight: bold;
+    }
+    
+    .message-detail-content {
+        text-indent: 5px;
+    }
+
+    p {
+        margin-top: 20px;
+    }
 }
 
 // -------------------- about -------------------- //
