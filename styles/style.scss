@@ -99,8 +99,28 @@ nav {
     top: 103px;
     width: 30px;
 
+    transition: ease-in .2s;
+    -webkit-transition: ease-in .2s;
+    -o-transition: ease-in .2s;
+    -moz-transition: ease-in .2s;
+
     p {
         margin-left: 2px;
+    }
+
+    &:hover {
+        box-shadow: 2px 2px 2px #3a3a3a;
+        transform: translate(-2px, -2px);
+    }
+
+    &:active {
+        box-shadow: none;
+        transform: translate(0, -0);
+
+        transition: ease-in 0s;
+        -webkit-transition: ease-in 0s;
+        -o-transition: ease-in 0s;
+        -moz-transition: ease-in 0s;
     }
 }
 
@@ -306,6 +326,12 @@ main {
 // -------------- message details ---------------- //
 
 .message-details {
+    align-items: center;
+
+    .message-detail-container {
+        border-left: 3px solid #3a3a3a;
+        padding-left: 10px;
+    }
 
     .message-detail-author > span,
     .message-detail-date {
