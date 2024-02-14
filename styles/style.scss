@@ -87,7 +87,6 @@ nav {
 
 .new-message-a {
     border: 2px solid #3a3a3a;
-    border-radius: 5px;
     color: #3a3a3a;
     display: grid;
     font-size: 24px;
@@ -327,6 +326,7 @@ main {
 
 .message-details {
     align-items: center;
+    padding-top: 30px;
 
     .message-detail-container {
         border-left: 3px solid #3a3a3a;
