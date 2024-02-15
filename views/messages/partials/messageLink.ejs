@@ -6,6 +6,6 @@
     </div>
     <p class="message-content"><%= message.message %></p>
     <div class="message-info">
-        <p><%= `${message.date_posted.getDate()}.${message.date_posted.getMonth()}.${message.date_posted.getFullYear()}` %></p>
+        <p><%= `${message.date_posted.getDate()}.${message.date_posted.getMonth() + 1}.${message.date_posted.getFullYear()}` %></p>
     </div>
 </a>
