@@ -54,6 +54,7 @@ function message_post(req, res) {
     author,
     message,
     avatar_svg: avatarSvg,
+    date_posted: new Date(),
   });
 
   console.log(author, message);
