@@ -203,7 +203,21 @@ main {
       font-family: "poor-story", sans-serif;
       font-size: 24px;
       font-weight: bold;
-      margin: 10px 0 0 auto; }
+      margin: 10px 0 0 auto;
+      transition: ease-in .2s;
+      -webkit-transition: ease-in .2s;
+      -o-transition: ease-in .2s;
+      -moz-transition: ease-in .2s; }
+      .new-message-page form button[type=submit]:hover {
+        text-shadow: 2px 2px 2px blue;
+        transform: translate(-2px, -2px); }
+      .new-message-page form button[type=submit]:active {
+        text-shadow: none;
+        transform: translate(0, 0);
+        transition: ease-in 0s;
+        -webkit-transition: ease-in 0s;
+        -o-transition: ease-in 0s;
+        -moz-transition: ease-in 0s; }
 
 .form-input {
   display: flex;
